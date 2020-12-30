@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solpage</title>
+    <style>
+      body{
+        background-color: rgb(250,250,250);
+      }
+      .head{
+        background-color: #003153;
+      }
+      header{
+        text-align: center;
+        padding-top: 80px;
+      }
+      #MainTitle{
+        color: white;
+      }
+      #MainTitle h1{
+        font-size: 30px;
+        margin: 0;
+      }
+      #SubTitle{
+        color: #76addb;
+        font-size: 15px;
+        padding: 8px 0 8px 0;
+      }
+      nav div ul li{
+        display: inline-block;
+      }
+      .menu1{
+        padding: 14.4px;
+      }
+      .menu1 a{
+        display: block;
+        color: white;
+        text-decoration: none;
+      }
+      .menu2{
+        width: 130px;
+        background-color: #003153;
+      }
+      .menu1>li, .menu2>li, .menu3>li{
+        position: relative;
+        width: 130px;
+        height: 50px;
+        background-color: #003153;
+        text-align: center;
+        line-height: 50px;
+        display: inline-block;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      .menu1>li:hover .menu2{
+        left: 130px;
+      }
+      .menu1>li a:hover{
+        display: block;
+        color: rgb(75,175,150);
+      }
+      .menu2, .menu3{
+        width: 130px;
+        position: absolute;
+        top: 0;
+        left: -9999px;
+        margin: 0;
+        padding: 0;
+      }
+      .menu2>li:hover .menu3{
+        left: 130px;
+      }
+      .menu2>li a:hover{
+        display: block;
+        color: rgb(75,175,150);
+      }
+      .menu3>li a:hover{
+        display: block;
+        color: rgb(75,175,150);
+      }
+
+      .head-bottom{
+        padding: 0;
+        display: grid;
+        background-color: #dddddd;
+        grid-template-columns: 1fr 800px 1fr;
+        height: 30px;
+      }
+      .head-bottom div{
+        font-size: 8px;
+        padding: 10px 0 10px 10px;
+        color: #999999;
+      }
+
+
+      .body{
+        display: grid;
+        grid-template-columns: 1fr 800px 1fr;
+      }
+      .body .contents{
+        padding: 20px;
+        border-left: solid 2px #dddddd;
+        border-right: solid 2px #dddddd;
+      }
+      .body .contents .content{
+        border-bottom: 1px dotted grey;
+        padding: 20px;
+      }
+      #gotop{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 75px;
+        height: 25px;
+        background-color: #003153;
+        text-align: center;
+        color: white;
+        padding: 5px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      #gotop a:hover{
+        color:rgb(75,175,150);
+      }
+
+
+      footer{
+        border-top: 2px solid black;
+        text-align: center;
+        padding-top: 10px;
+      }
+    </style>
+</head>
+<body>
+  <div class="head">
+    <header>
+      <div id="MainTitle"><h1>SolPage</h1></div>
+      <div id="SubTitle">Welcome to the <strong style="color: pink;">Solchan's Web Page</strong> </div>
+    </header>
+    <nav>
+      <div>
+        <ul class="menu1">
+          <li>
+            <div><a href="#">메뉴</a></div>
+            <ul class="menu2">
+              <li>
+                <div><a href="#">글</a></div>
+                <ul class="menu3">
+                  <li><a href="#content1">글 1</a></li>
+                  <li><a href="#content2">글 2</a></li>
+                  <li><a href="#content3">글 3</a></li>
+                </ul>
+              </li>
+              <li>
+                <div><a href="#">이것 저것</a></div>
+                <ul class="menu3">
+                  <li><a href="bonobono.html">보노보노 사진</a></li>
+                  <li><a href="music.html">노래 듣기</a></li>
+                  <li><a href="popcat.html">Pop Cat</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div> 
+    </nav>
+    <div class="head-bottom">
+      <span></span>
+      <div>solius03</div>
+      <span></span>
+    </div>
+  </div>
+  <div class="body">
+    <div></div>
+    <div class="contents">
+      <div class="content" style="height: 500px;">
+        <div id="content1">
+          123
+        </div>
+      </div>
+      <div class="content" style="height: 500px;">
+        <div id="content2">
+          456
+        </div>
+      </div>
+      <div class="content" style="height: 500px;">
+        <div id="content3">
+          789
+        </div>
+      </div>
+      <!-- 라이브리 시티 설치 코드 -->
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81MjI3OC8yODc1Nw==">
+        <script type="text/javascript">
+           (function(d, s) {
+               var j, e = d.getElementsByTagName(s)[0];
+        
+               if (typeof LivereTower === 'function') { return; }
+        
+               j = d.createElement(s);
+               j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+               j.async = true;
+        
+               e.parentNode.insertBefore(j, e);
+           })(document, 'script');
+        </script>
+      </div>
+<!-- 시티 설치 코드 끝 -->
+    </div>
+    <div></div>
+  </div>
+  <div id="gotop">
+    <a onclick="goTop()">맨 위로 ↑</a>
+  </div>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5fe5e0dda8a254155ab646f6/1eqcvcorr';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <footer style="height: 50px;">
+    solchanwork@gmail.com 박솔찬
+  </footer>
+</body>
+<script>
+  function goTop(){
+	  document.documentElement.scrollTop = 0;
+  }
+</script>
+</html>
